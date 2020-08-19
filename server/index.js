@@ -48,7 +48,7 @@ app.init = function(options) {
     if (['HEAD', 'GET'].includes(ctx.method) && !ctx.path.startsWith('/api')) {
       try {
         ctx.set('X-Content-Type-Options', 'nosniff')
-        ctx.set('X-Frame-Options', 'SAMEORIGIN')
+        // ctx.set('X-Frame-Options', 'SAMEORIGIN')
         ctx.set('X-XSS-Protection', '1; mode=block')
 
         if (useWebpack) {
